@@ -1,0 +1,12 @@
+# docker-compose.yml
+services:
+    app:
+        build: .
+        ports:
+          - 4000:3000
+        links:
+          - mongodb
+
+    mongodb:
+        image: mongo
+
